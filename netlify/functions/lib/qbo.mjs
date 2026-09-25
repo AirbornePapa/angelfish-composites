@@ -3,7 +3,7 @@
 // Credentials come ONLY from Netlify environment variables:
 //   QBO_CLIENT_ID, QBO_CLIENT_SECRET            (required)
 //   QBO_ENVIRONMENT  (default "sandbox"; anything else is refused for now)
-//   QBO_REDIRECT_URI (default https://angelfishhomes.com/.netlify/functions/qbo-callback)
+//   QBO_REDIRECT_URI (default https://angelfishhomes.com/qbo/callback)
 //   ADMIN_PASSWORD   (guards every admin/test endpoint)
 //
 // OAuth tokens (access token, refresh token, expiries, realmId) are stored in
@@ -20,7 +20,7 @@ export const SCOPE = "com.intuit.quickbooks.accounting";
 export const AUTHORIZE_URL = "https://appcenter.intuit.com/connect/oauth2";
 export const TOKEN_URL = "https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer";
 export const API_BASES = { sandbox: "https://sandbox-quickbooks.api.intuit.com" };
-export const DEFAULT_REDIRECT_URI = "https://angelfishhomes.com/.netlify/functions/qbo-callback";
+export const DEFAULT_REDIRECT_URI = "https://angelfishhomes.com/qbo/callback";
 const REFRESH_MARGIN_MS = 5 * 60 * 1000; // refresh when within 5 minutes of expiry
 
 /* ================================================================

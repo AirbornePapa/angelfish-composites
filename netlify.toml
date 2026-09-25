@@ -11,3 +11,10 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
     Cache-Control = "no-store"
+
+# Short, clean address for the QuickBooks OAuth redirect (registered in the Intuit portal).
+[[redirects]]
+  from = "/qbo/callback"
+  to = "/.netlify/functions/qbo-callback"
+  status = 200
+  force = true
