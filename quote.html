@@ -351,6 +351,12 @@
     margin-bottom: 0.25rem;
     grid-column: 1/-1;
   }
+  /* Grade multi-select */
+  .grade-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .grade-check { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; background: rgba(255,255,255,0.06); cursor: pointer; font-size: 0.85rem; color: rgba(255,255,255,0.85); text-transform: none; letter-spacing: 0; font-weight: 400; }
+  .grade-check:hover { border-color: var(--teal-light); }
+  .grade-check input { accent-color: var(--teal-light); width: 16px; height: 16px; margin: 0; }
+  .grade-check.grade-all { font-weight: 600; color: var(--gold); }
   /* Upload zones */
   .upload-zone {
     border: 2px dashed rgba(255,255,255,0.2); border-radius: 10px;
@@ -496,16 +502,34 @@
         <input type="text" name="school-name" placeholder="Riverside Academy" required>
       </div>
       <div class="form-group">
-        <label>Grade / Class</label>
-        <input type="text" name="grade-class" placeholder="3rd Grade, Room 12">
-      </div>
-      <div class="form-group">
         <label>School City &amp; State *</label>
         <input type="text" name="school-location" placeholder="Sacramento, CA" required>
       </div>
       <div class="form-group">
         <label>School Year</label>
         <input type="text" placeholder="2024–2025">
+      </div>
+      <div class="form-group full">
+        <label>Grades Needing Composites * <span style="text-transform:none;letter-spacing:0;font-weight:400;opacity:0.6;">(check every grade — one quote covers the whole school)</span></label>
+        <div class="grade-grid" id="gradeGrid">
+          <label class="grade-check grade-all"><input type="checkbox" id="gradeAll" onchange="toggleAllGrades(this)"> Select all</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="Preschool"> Preschool</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="Pre-K"> Pre-K</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="Transitional Kindergarten (TK)"> Transitional Kindergarten (TK)</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="Kindergarten"> Kindergarten</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="1st Grade"> 1st Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="2nd Grade"> 2nd Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="3rd Grade"> 3rd Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="4th Grade"> 4th Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="5th Grade"> 5th Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="6th Grade"> 6th Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="7th Grade"> 7th Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="8th Grade"> 8th Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="9th Grade"> 9th Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="10th Grade"> 10th Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="11th Grade"> 11th Grade</label>
+          <label class="grade-check"><input type="checkbox" name="grades" value="12th Grade"> 12th Grade</label>
+        </div>
       </div>
       <div class="form-group full">
         <label>School Logo Upload</label>
@@ -826,10 +850,14 @@
   }
 
   // Form submit
+  function toggleAllGrades(box) {
+    document.querySelectorAll('input[name="grades"]').forEach(c => c.checked = box.checked);
+  }
   function handleSubmit(e) {
     e.preventDefault();
     const pkg = document.querySelector('input[name="package"]:checked');
     if (!pkg) { alert('Please select a package before submitting.'); return; }
+    if (!document.querySelector('input[name="grades"]:checked')) { alert('Please check at least one grade that needs a composite.'); return; }
     document.getElementById('successModal').classList.add('active');
     e.target.reset();
     document.querySelectorAll('.template-card').forEach(c => c.classList.remove('selected'));
