@@ -514,44 +514,25 @@
         <label>State *</label>
         <input type="text" name="billing-state" placeholder="CA" maxlength="2" autocomplete="billing address-level1" required>
       </div>
+      <div class="form-group full">
+        <label>Billing ZIP Code *</label>
+        <input type="text" name="billing-zip" placeholder="95628" maxlength="10" autocomplete="billing postal-code" required>
+      </div>
 
       <div class="form-section-title">Payment Information</div>
       <div class="payment-section" style="grid-column:1/-1;">
         <div class="payment-note">
-          🔒 Your payment is secured with 256-bit SSL encryption. We accept Visa, Mastercard, American Express, and Discover.
-        </div>
-        <div class="form-grid" style="grid-template-columns:1fr 1fr;">
-          <div class="form-group full">
-            <label>Cardholder Name *</label>
-            <input type="text" name="cardholder-name" placeholder="Jane M. Smith" required>
-          </div>
-          <div class="form-group full">
-            <label>Card Number *</label>
-            <input type="text" name="card-number" placeholder="•••• •••• •••• ••••" maxlength="19" oninput="formatCard(this)" required>
-          </div>
-          <div class="form-group">
-            <label>Expiration Date *</label>
-            <input type="text" name="card-expiry" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)" required>
-          </div>
-          <div class="form-group">
-            <label>CVV *</label>
-            <input type="text" name="card-cvv" placeholder="•••" maxlength="4" required>
-          </div>
-          <div class="form-group full">
-            <label>Billing ZIP Code *</label>
-            <input type="text" name="billing-zip" placeholder="95628" maxlength="5" required>
-          </div>
+          🔒 Payments are processed securely by QuickBooks. After you click the button below, we'll save your details and take you to our secure QuickBooks payment page to finish paying. We never see or store your card number.
         </div>
       </div>
 
     </div>
     <button type="submit" class="submit-btn">
-      🔒 Complete Payment Securely
+      Continue to payment page
     </button>
     <div class="secure-badges">
       <div class="secure-badge">🔒 SSL Encrypted</div>
-      <div class="secure-badge">✔ PCI Compliant</div>
-      <div class="secure-badge">💳 Visa · MC · Amex · Discover</div>
+      <div class="secure-badge">✔ Secure QuickBooks checkout</div>
     </div>
   </form>
 </section>
@@ -597,10 +578,30 @@
     if (v.length > 2) v = v.substring(0, 2) + ' / ' + v.substring(2);
     input.value = v;
   }
+  /* ============================================================
+     QUICKBOOKS PAYMENT LINK
+     Paste your QuickBooks payment link between the quotes below.
+     This is the only line you need to change to update the link.
+     ============================================================ */
+  const QUICKBOOKS_PAYMENT_LINK = "PASTE_QUICKBOOKS_PAYMENT_LINK_HERE";
+
   function handlePaymentSubmit(e) {
     e.preventDefault();
-    document.getElementById('successModal').classList.add('active');
-    e.target.reset();
+    const form = e.target;
+    const link = QUICKBOOKS_PAYMENT_LINK.trim();
+    const linkReady = /^https?:\/\//i.test(link);
+    // Save the customer's details to Netlify Forms, then go to QuickBooks.
+    const body = new URLSearchParams(new FormData(form)).toString();
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+      .catch(function () {})
+      .finally(function () {
+        if (linkReady) {
+          window.location.href = link;
+        } else {
+          alert('Thank you! We have your details. Our online payment page is being set up, so we will email you a secure payment link shortly.');
+          form.reset();
+        }
+      });
   }
 </script>
 
