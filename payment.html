@@ -580,21 +580,40 @@
   }
   /* ============================================================
      QUICKBOOKS PAYMENT LINK
-     Paste your QuickBooks payment link between the quotes below.
-     This is the only line you need to change to update the link.
+     The payment link is NO LONGER set in this file.
+     It is now managed at /admin.html (password protected) and is
+     loaded from the /.netlify/functions/payment-link function.
+     If the link is empty or cannot be loaded, customers see the
+     fallback "payment page is being set up" message instead.
      ============================================================ */
-  const QUICKBOOKS_PAYMENT_LINK = "PASTE_QUICKBOOKS_PAYMENT_LINK_HERE";
+  const PAYMENT_LINK_ENDPOINT = '/.netlify/functions/payment-link';
+  let QUICKBOOKS_PAYMENT_LINK = '';
+
+  function loadPaymentLink() {
+    return fetch(PAYMENT_LINK_ENDPOINT, { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : { link: '' }; })
+      .then(function (d) {
+        QUICKBOOKS_PAYMENT_LINK = (d && typeof d.link === 'string') ? d.link.trim() : '';
+        return QUICKBOOKS_PAYMENT_LINK;
+      })
+      .catch(function () { return QUICKBOOKS_PAYMENT_LINK; });
+  }
+  // Load the link when the page opens (and re-check at submit time).
+  loadPaymentLink();
 
   function handlePaymentSubmit(e) {
     e.preventDefault();
     const form = e.target;
-    const link = QUICKBOOKS_PAYMENT_LINK.trim();
-    const linkReady = /^https?:\/\//i.test(link);
     // Save the customer's details to Netlify Forms, then go to QuickBooks.
     const body = new URLSearchParams(new FormData(form)).toString();
-    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
-      .catch(function () {})
-      .finally(function () {
+    Promise.all([
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+        .catch(function () {}),
+      loadPaymentLink()
+    ])
+      .then(function (results) {
+        const link = String(results[1] || '').trim();
+        const linkReady = /^https?:\/\//i.test(link);
         if (linkReady) {
           window.location.href = link;
         } else {
