@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean White Grid — Angelfish Composites Template</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin:0;padding:0;box-sizing:border-box; }
+  body { background:#1a1a2e;font-family:'DM Sans',sans-serif;display:flex;flex-direction:column;align-items:center;padding:40px 20px 60px;min-height:100vh; }
+  .page-title { font-family:'Playfair Display',serif;font-size:1.6rem;color:white;margin-bottom:8px;text-align:center; }
+  .page-sub { font-size:0.9rem;color:rgba(255,255,255,0.5);margin-bottom:24px;text-align:center; }
+  .instructions { background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:16px 24px;margin-bottom:32px;max-width:1000px;width:100%;font-size:0.85rem;color:rgba(255,255,255,0.65);line-height:1.7; }
+  .instructions strong { color:#4a90d9; }
+  .svg-wrapper { background:white;box-shadow:0 20px 80px rgba(0,0,0,0.5);border-radius:4px;max-width:1000px;width:100%; }
+  .svg-wrapper svg { display:block;width:100%;height:auto; }
+  .download-btn { margin-top:24px;background:#4a90d9;color:white;border:none;padding:14px 32px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif; }
+  .download-btn:hover { background:#6aaae9; }
+</style>
+</head>
+<body>
+<p class="page-title">Clean White Grid — Composite Template</p>
+<p class="page-sub">Angelfish Composites · Style 3 of 4</p>
+<div class="instructions">
+  <strong>How to open in Photoshop:</strong> Click Download SVG. In Photoshop go to <strong>File → Open</strong>, select the .svg, and set rasterize size. The colorful logo cluster top-left can be replaced with your actual school logo. Individual photo frames accept real portrait photos via smart object layers.
+</div>
+<div class="svg-wrapper">
+<svg viewBox="0 0 1000 1100" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fafbfc"/><stop offset="100%" stop-color="#f0f2f5"/></linearGradient>
+  <filter id="sh"><feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="rgba(0,0,0,0.12)"/></filter>
+  <radialGradient id="s1" cx="50%" cy="40%"><stop offset="0%" stop-color="#f8d5b0"/><stop offset="100%" stop-color="#d09060"/></radialGradient>
+  <radialGradient id="s2" cx="50%" cy="40%"><stop offset="0%" stop-color="#c88642"/><stop offset="100%" stop-color="#9a5828"/></radialGradient>
+  <radialGradient id="s3" cx="50%" cy="40%"><stop offset="0%" stop-color="#8d5524"/><stop offset="100%" stop-color="#5a3010"/></radialGradient>
+  <radialGradient id="s4" cx="50%" cy="40%"><stop offset="0%" stop-color="#f0c8a0"/><stop offset="100%" stop-color="#c08050"/></radialGradient>
+  <radialGradient id="s5" cx="50%" cy="40%"><stop offset="0%" stop-color="#d4a574"/><stop offset="100%" stop-color="#a07040"/></radialGradient>
+</defs>
+
+<rect width="1000" height="1100" fill="url(#bgG)"/>
+<rect x="0" y="0" width="1000" height="1100" fill="none" stroke="#e0e0e0" stroke-width="4"/>
+
+<!-- HEADER -->
+<rect x="0" y="0" width="1000" height="100" fill="white"/>
+<line x1="0" y1="98" x2="1000" y2="98" stroke="#e0e0e0" stroke-width="2"/>
+
+<!-- Colorful logo cluster top-left -->
+<circle cx="38" cy="30" r="22" fill="#e84393" opacity="0.88"/>
+<circle cx="66" cy="30" r="22" fill="#f5a623" opacity="0.88"/>
+<circle cx="38" cy="62" r="22" fill="#4a90d9" opacity="0.88"/>
+<circle cx="66" cy="62" r="22" fill="#7ed321" opacity="0.88"/>
+<!-- center overlap -->
+<circle cx="52" cy="46" r="14" fill="white" opacity="0.7"/>
+<text x="52" y="50" font-family="'DM Sans',Arial,sans-serif" font-size="10" font-weight="700" fill="#333" text-anchor="middle">OA</text>
+
+<!-- School name centered -->
+<text x="540" y="38" font-family="'Playfair Display',Georgia,serif" font-size="28" font-weight="700" fill="#111" text-anchor="middle" letter-spacing="1">Oakwood Academy</text>
+<text x="540" y="60" font-family="'DM Sans',Arial,sans-serif" font-size="14" fill="#555" text-anchor="middle">2025–2026 · Kindergarten</text>
+<!-- Year range top-right -->
+<text x="940" y="38" font-family="Georgia,serif" font-size="12" fill="#888" text-anchor="middle">Ms. Sarah</text>
+<text x="940" y="55" font-family="Georgia,serif" font-size="12" fill="#888" text-anchor="middle">Williams</text>
+<text x="940" y="72" font-family="'DM Sans',Arial,sans-serif" font-size="10" fill="#aaa" text-anchor="middle">Room 12</text>
+<line x1="120" y1="78" x2="870" y2="78" stroke="#ddd" stroke-width="1"/>
+
+<!-- STUDENT GRID: 6 per row × 4 rows (light backgrounds, colorful shirts) -->
+<!-- Row 1 Y=170, Row 2 Y=365, Row 3 Y=560, Row 4 Y=755 -->
+<!-- X positions: 90 240 390 540 690 840 -->
+
+
+<g transform="translate(90,180)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0f4ff"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#2c5aa0"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s1)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#c0392b"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#c0392b"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#c0392b"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="90" y="275" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Emma J.</text>
+<g transform="translate(250,180)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fff8f0"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#27ae60"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s2)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#1a0a00"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#1a0a00"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#1a0a00"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="250" y="275" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Marcus W.</text>
+<g transform="translate(410,180)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0fff4"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#c0392b"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s3)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#d4a017"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#d4a017"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#d4a017"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="410" y="275" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Sophia C.</text>
+<g transform="translate(570,180)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fdf0ff"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#8e44ad"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s4)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#2c1810"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#2c1810"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#2c1810"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="570" y="275" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Darius T.</text>
+<g transform="translate(730,180)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0fffe"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#16a085"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s5)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#8B5E3C"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#8B5E3C"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#8B5E3C"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="730" y="275" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Olivia M.</text>
+<g transform="translate(890,180)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fffaf0"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#d35400"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s1)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#2c2c2c"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#2c2c2c"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#2c2c2c"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="890" y="275" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Ethan P.</text>
+<g transform="translate(90,370)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0f4ff"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#2980b9"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s2)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#5c3a1e"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#5c3a1e"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#5c3a1e"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="90" y="465" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Aisha R.</text>
+<g transform="translate(250,370)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fff8f0"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#c0392b"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s3)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#f39c12"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#f39c12"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#f39c12"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="250" y="465" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Liam O.</text>
+<g transform="translate(410,370)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0fff4"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#27ae60"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s4)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#1a0800"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#1a0800"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#1a0800"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="410" y="465" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Zoe J.</text>
+<g transform="translate(570,370)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fdf0ff"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#8e44ad"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s5)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#3d1c00"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#3d1c00"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#3d1c00"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="570" y="465" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Noah P.</text>
+<g transform="translate(730,370)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0fffe"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#16a085"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s1)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#c0392b"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#c0392b"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#c0392b"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="730" y="465" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Isabella S.</text>
+<g transform="translate(890,370)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fffaf0"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#2c5aa0"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s2)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#2c1810"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#2c1810"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#2c1810"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="890" y="465" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Gabriel R.</text>
+<g transform="translate(90,560)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0f4ff"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#d35400"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s3)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#b8860b"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#b8860b"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#b8860b"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="90" y="655" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Mia K.</text>
+<g transform="translate(250,560)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fff8f0"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#2980b9"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s4)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#1a0a00"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#1a0a00"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#1a0a00"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="250" y="655" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">James C.</text>
+<g transform="translate(410,560)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0fff4"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#c0392b"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s5)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#d4a017"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#d4a017"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#d4a017"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="410" y="655" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Ava M.</text>
+<g transform="translate(570,560)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fdf0ff"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#27ae60"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s1)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#2c2c2c"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#2c2c2c"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#2c2c2c"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="570" y="655" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Samuel O.</text>
+<g transform="translate(730,560)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0fffe"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#16a085"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s2)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#8B5E3C"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#8B5E3C"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#8B5E3C"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="730" y="655" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Luna H.</text>
+<g transform="translate(890,560)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fffaf0"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#8e44ad"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s3)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#5c3a1e"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#5c3a1e"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#5c3a1e"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="890" y="655" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Jackson L.</text>
+<g transform="translate(90,750)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0f4ff"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#d35400"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s4)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#c0392b"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#c0392b"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#c0392b"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="90" y="845" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Chloe W.</text>
+<g transform="translate(250,750)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fff8f0"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#2c5aa0"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s5)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#3d1c00"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#3d1c00"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#3d1c00"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="250" y="845" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Ryan M.</text>
+<g transform="translate(410,750)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0fff4"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#c0392b"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s1)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#f39c12"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#f39c12"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#f39c12"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="410" y="845" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Priya S.</text>
+<g transform="translate(570,750)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#fdf0ff"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#27ae60"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s2)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#2c1810"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#2c1810"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#2c1810"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="570" y="845" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Tyler B.</text>
+<g transform="translate(730,750)" filter="url(#sh)">
+  <rect x="-70" y="-95" width="140" height="175" rx="4" fill="white" stroke="#e8e8e8" stroke-width="1.5"/>
+  <rect x="-66" y="-91" width="132" height="162" rx="3" fill="#f0fffe"/>
+  <ellipse cx="0" cy="60" rx="50" ry="34" fill="#8e44ad"/>
+  <ellipse cx="0" cy="0" rx="32" ry="38" fill="url(#s3)"/>
+  <ellipse cx="0" cy="-33" rx="32" ry="15" fill="#1a0800"/>
+  <ellipse cx="-28" cy="-12" rx="10" ry="24" fill="#1a0800"/>
+  <ellipse cx="28" cy="-12" rx="10" ry="24" fill="#1a0800"/>
+  <ellipse cx="-11" cy="-4" rx="6" ry="7" fill="white"/><ellipse cx="11" cy="-4" rx="6" ry="7" fill="white"/>
+  <circle cx="-11" cy="-3" r="4" fill="#1a1010"/><circle cx="11" cy="-3" r="4" fill="#1a1010"/>
+  <circle cx="-9" cy="-5" r="1.5" fill="white"/><circle cx="13" cy="-5" r="1.5" fill="white"/>
+  <path d="M-11,14 Q0,20 11,14" stroke="#c47a50" stroke-width="2" fill="none" stroke-linecap="round"/>
+</g>
+<text x="730" y="845" font-family="'DM Sans',Arial,sans-serif" font-size="11" fill="#333" text-anchor="middle">Nadia J.</text>
+
+<!-- FOOTER -->
+<rect x="0" y="1060" width="1000" height="40" fill="white"/>
+<line x1="0" y1="1060" x2="1000" y2="1060" stroke="#e0e0e0" stroke-width="1.5"/>
+<text x="500" y="1080" font-family="Georgia,serif" font-size="12" fill="#555" text-anchor="middle">Oakwood Academy · Kindergarten · Room 12 · 2025–2026</text>
+<text x="500" y="1095" font-family="'DM Sans',Arial,sans-serif" font-size="9" fill="#aaa" text-anchor="middle">Angelfish Composites · Professional School Photo Composites</text>
+
+</svg>
+</div>
+<button class="download-btn" onclick="dl()">⬇ Download SVG</button>
+<script>function dl(){const s=document.querySelector('svg');const b=new Blob(['<?xml version="1.0" encoding="UTF-8"?>\n'+new XMLSerializer().serializeToString(s)],{type:'image/svg+xml'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='clean-white-grid.svg';a.click();}</script>
+</body></html>
