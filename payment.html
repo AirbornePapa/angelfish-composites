@@ -501,6 +501,20 @@
         <input type="text" name="quote-ref" placeholder="e.g. AFH-2025-001">
       </div>
 
+      <div class="form-section-title">Billing Address</div>
+      <div class="form-group full">
+        <label>Street Address *</label>
+        <input type="text" name="billing-street" placeholder="123 Main St" autocomplete="billing street-address" required>
+      </div>
+      <div class="form-group full">
+        <label>City *</label>
+        <input type="text" name="billing-city" placeholder="Fair Oaks" autocomplete="billing address-level2" required>
+      </div>
+      <div class="form-group full">
+        <label>State *</label>
+        <input type="text" name="billing-state" placeholder="CA" maxlength="2" autocomplete="billing address-level1" required>
+      </div>
+
       <div class="form-section-title">Payment Information</div>
       <div class="payment-section" style="grid-column:1/-1;">
         <div class="payment-note">
