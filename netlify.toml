@@ -18,3 +18,18 @@
   to = "/.netlify/functions/qbo-callback"
   status = 200
   force = true
+
+
+# Stable short link for the employee timecard. Points at the support
+# account OneDrive; update the target if that OneDrive path changes.
+[[redirects]]
+  from = "/timecard"
+  to = "https://angelfishhomes-my.sharepoint.com/:x:/r/personal/support_angelfishgroup_com/_layouts/15/doc2.aspx?sourcedoc=%7BAA5F370D-9994-4DF1-993F-0CA4DC531083%7D&file=Timecard.xlsx&action=default"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/timecard/"
+  to = "https://angelfishhomes-my.sharepoint.com/:x:/r/personal/support_angelfishgroup_com/_layouts/15/doc2.aspx?sourcedoc=%7BAA5F370D-9994-4DF1-993F-0CA4DC531083%7D&file=Timecard.xlsx&action=default"
+  status = 302
+  force = true
